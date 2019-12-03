@@ -1,0 +1,26 @@
+#include <kipr/botball.h>
+int l_motor = 0;
+int r_motor = 3;
+int rspeed = 35; //rspeed of forward
+int lspeed = 35; //lspeed of forward
+int red = 0;
+int green = 1;
+int orange = 2;
+int centerserv = 1100;
+
+
+int main()
+{
+  while(1){
+    camera_open();
+    printf("greencount=%d\n",get_object_count(green));
+    printf("green xvalue=%d\n", get_object_center_x(green, 0));
+    printf("redcount=%d\n", get_object_count(red));
+    printf("red xvalue=%d\n", get_object_center_x(red, 0));
+    printf("orangecount=%d\n", get_object_count(orange));
+    printf("orange xvalue=%d\n", get_object_center_x(orange, 0));
+    msleep(100);
+  }
+  camera_close();
+  }
+   
